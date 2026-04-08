@@ -21,6 +21,7 @@ set -eo pipefail
 # Avoid failing the job because of `set -u` during `module load`.
 set +u
 module purge
+# Reference environment: PyTorch 2.0 (Jean Zay module below).
 module load pytorch-gpu/py3/2.0.0
 set -u
 export PYTHONUNBUFFERED=1

@@ -1,0 +1,17 @@
+# Minimal Python deps to run generate.py (inference-only)
+#
+# Reference environment (Jean Zay): PyTorch 2.0 via `module load pytorch-gpu/py3/2.0.0`.
+# In Docker, install an equivalent torch version (2.0.*) that matches your target (CPU vs CUDA).
+#
+# NOTE about PyTorch:
+# - Install a torch wheel that matches your target (CPU vs CUDA) and your base image.
+#   Examples:
+#   - CPU-only: pip install --index-url https://download.pytorch.org/whl/cpu torch
+#   - CUDA 11.8: pip install --index-url https://download.pytorch.org/whl/cu118 torch
+#   - CUDA 12.1: pip install --index-url https://download.pytorch.org/whl/cu121 torch
+#
+# StyleGAN2-ADA dependencies used by generate.py + legacy/dnnlib/torch_utils
+numpy
+Pillow
+requests
+click
